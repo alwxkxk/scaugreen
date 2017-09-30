@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
@@ -14,12 +14,11 @@
       <el-button type="primary">
         +
       </el-button>
-      <el-dropdown-menu trigger="click" slot="dropdown">
+      <el-dropdown-menu trigger="click" slot="dropdown" >
       <!-- 使用 router-link 组件来导航. -->
       <!-- 通过传入 `to` 属性指定链接. -->
       <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
-        <el-dropdown-item> <router-link to="/foo">Go to Foo</router-link></el-dropdown-item>
-        <el-dropdown-item><router-link to="/bar">Go to Bar</router-link></el-dropdown-item>
+        <el-dropdown-item v-for="page of pages"> <router-link v-bind:to="'/'+page.title">{{page.title}}</router-link></el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
 
