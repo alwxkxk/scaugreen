@@ -1,11 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-default/index.css'
 import './index.css'
 import pages from './pages.json'
 
-Vue.use(ElementUI)
 Vue.use(VueRouter)
 
 // 定义路由
@@ -15,9 +12,16 @@ pages.forEach(function (element) {
     path: '/' + element.title,
     component: { template: '<div>' + element.content + '</div>' }
   })
+
+  // 将首页渲染成绿音
+  if (element.title === '绿音') {
+    routes.push({
+      path: '/',
+      component: { template: '<div>' + element.content + '</div>' }
+    })
+  }
 }, this)
 // 将/重定向至/绿音
-routes.push({path: '/', redirect: '/绿音'})
 
 // 3. 创建 router 实例，然后传 `routes` 配置
 // 你还可以传别的配置参数, 不过先这么简单着吧。
@@ -34,3 +38,19 @@ const app = new Vue({
     pages: pages
   }
 }).$mount('#app')
+
+jQuery(document).ready(function ($) {
+  $('#menu').mmenu()
+  let mmenuAPI = $('#menu').data('mmenu')
+
+  $('#menu-button').click(function () {
+    mmenuAPI.open()
+  })
+
+ // 处理苹果点击两次的问题
+  $('a').on('click touchend', function (e) {
+    var el = $(this)
+    var link = el.attr('href')
+    window.location = link
+  })
+})

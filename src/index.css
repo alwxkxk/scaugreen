@@ -27,3 +27,17 @@ p{
   top:0px;
 
 }
+
+#menu-button{
+  position: fixed;
+  border-color:#fff;
+  top:0px;
+}
+
+#menu{
+  background-image: url("/img/scaugreen-menu.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:center;
+  color: #fff;
+}
