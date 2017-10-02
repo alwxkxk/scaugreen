@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link type="text/css" href="./jquery.mmenu.css" rel="stylesheet" />
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="./jquery.mmenu.js"></script>
   <title>绿音</title>
 </head>
 
@@ -12,20 +15,28 @@
   <div id="header">
     <img src="http://ox6t89mri.bkt.clouddn.com/scaugreen-header.JPG" alt="头图">
   </div>
-  
+
   <div id="app">
-    <el-dropdown>
+    <!-- <el-dropdown>
       <el-button type="primary">
         +
       </el-button>
       <el-dropdown-menu trigger="click" slot="dropdown" >
-      <!-- 使用 router-link 组件来导航. -->
-      <!-- 通过传入 `to` 属性指定链接. -->
-      <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
         <el-dropdown-item v-for="page of pages"> <router-link v-bind:to="'/'+page.title">{{page.title}}</router-link></el-dropdown-item>
       </el-dropdown-menu>
-    </el-dropdown>
-
+    </el-dropdown> -->
+    <!-- 导航栏 -->
+    <nav id="menu">
+      <ul>
+        <router-link v-bind:to="'/'+page.title">{{page.title}}</router-link>
+      </ul>
+    </nav>
+    <!-- 导航栏按钮 -->
+    <div id="menu-button">
+      <button type="button" class="btn btn-default" aria-label="Left Align">
+                  <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+                </button>
+    </div>
     <!-- 路由出口 -->
     <!-- 路由匹配到的组件将渲染在这里 -->
     <router-view></router-view>
