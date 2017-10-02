@@ -1,0 +1,29 @@
+img{
+  width: 100%;
+}
+
+body{
+  background-color: #F5F5F5;
+}
+
+h1{
+  text-align: center;
+}
+
+h3{
+  border-left: 0.25em solid lightgreen;
+}
+
+p{
+  text-indent: 1em;
+  background-color: white;
+  border-radius: 5%;
+}
+
+
+.el-dropdown{
+  position: fixed;
+  left: 0px;
+  top:0px;
+
+}

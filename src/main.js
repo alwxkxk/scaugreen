@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
+import './index.css'
 import pages from './pages.json'
 
 Vue.use(ElementUI)
@@ -15,6 +16,8 @@ pages.forEach(function (element) {
     component: { template: '<div>' + element.content + '</div>' }
   })
 }, this)
+// 将/重定向至/绿音
+routes.push({path: '/', redirect: '/绿音'})
 
 // 3. 创建 router 实例，然后传 `routes` 配置
 // 你还可以传别的配置参数, 不过先这么简单着吧。
