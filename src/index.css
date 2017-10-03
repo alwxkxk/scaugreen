@@ -18,9 +18,18 @@ p{
   text-indent: 1em;
   background-color: white;
   border-radius: 5%;
+  padding: 4px;
+}
+
+ol{
+  background-color: white;
+  border-radius: 5%;
 }
 
 
+.mm-title{
+  display: none;
+}
 .el-dropdown{
   position: fixed;
   left: 0px;
@@ -35,9 +44,18 @@ p{
 }
 
 #menu{
-  background-image: url("/img/scaugreen-menu.jpg");
+  background-image: url("/img/menu.jpg");
   background-repeat: no-repeat;
   background-size:cover;
   background-position:center;
   color: #fff;
+}
+
+#header{
+  height: 24vh;
+  width:100%;
+  background-image: url("/img/header.jpg");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:right;
 }

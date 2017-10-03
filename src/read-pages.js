@@ -51,7 +51,6 @@ async function readPages (callback) {
 function writeJSON (path, data) {
   let pages = []
   let i = 0
-
   for (let item in data) {
     pages.push({
       title: item,
@@ -61,7 +60,6 @@ function writeJSON (path, data) {
   }
 
   let json = JSON.stringify(pages)
-	// console.log(data,json)
   fs.writeFile(path, json, (err) => {
     if (err) throw err
     console.log('pages.json 写入成功')
