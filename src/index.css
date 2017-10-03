@@ -44,7 +44,7 @@ ol{
 }
 
 #menu{
-  background-image: url("/img/menu.jpg");
+  background-image: url("http://ox6t89mri.bkt.clouddn.com/menu.jpg");
   background-repeat: no-repeat;
   background-size:cover;
   background-position:center;
@@ -54,7 +54,7 @@ ol{
 #header{
   height: 24vh;
   width:100%;
-  background-image: url("/img/header.jpg");
+  background-image: url("http://ox6t89mri.bkt.clouddn.com/header.jpg");
   background-repeat: no-repeat;
   background-size:cover;
   background-position:right;
