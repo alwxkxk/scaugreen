@@ -10,7 +10,7 @@ let routes = []
 pages.forEach(function (element) {
   routes.push({
     path: '/' + element.title,
-    component: { template: '<div>' + element.content + '</div>' }
+    component: { template: '<div class="content">' + element.content + '</div>' }
   })
 
   // 将首页渲染成绿音

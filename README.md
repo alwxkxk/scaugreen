@@ -1,8 +1,14 @@
-
+### 开发基础
+- MarkDown
+- JS HTML5 CSS
+- Nodejs
+- Vue Vue-Router
+- Webpack
 
 ### 部署
 ```bash
-#生成文章.json ,并打包
+#修改src/pages/ 下的文章
+#生成文章pages.json ,并打包
 npm run build
 
 #手动将img,css,fonts,js文件夹复制粘贴到dist下
@@ -10,7 +16,7 @@ npm run build
 #本地测试
 npm run dev 
 
-#部署： 上传dist文件
+#部署： 上传dist文件 至七牛云 或gh-pages
 ```
 ### 备注
 为解决gh-pages图片路径问题，index.css使用的背景图 改用七牛云路径
