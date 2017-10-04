@@ -3,7 +3,11 @@ img{
 }
 
 body{
-  background-color: #F5F5F5;
+  background-image: url("http://ox6t89mri.bkt.clouddn.com/background-img.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position:center;
+  color: white;
 }
 
 h1{
@@ -11,28 +15,26 @@ h1{
 }
 
 h3{
-  border-left: 0.25em solid lightgreen;
+  border-left: 0.25em solid skyblue;
 }
 
 p{
   text-indent: 1em;
-  background-color: white;
   border-radius: 5%;
   padding: 4px;
 }
 
 ol{
-  background-color: white;
   border-radius: 5%;
 }
 
 .content img{
-  width: 50%;
+  width: 100%;
   margin: auto;
+  padding: 14%;
 }
 
 .content ul{
-  background-color: white;
   border-radius: 5%;
 }
 
@@ -61,7 +63,7 @@ ol{
 }
 
 #header{
-  height: 24vh;
+  height: 30vh;
   width:100%;
   background-image: url("http://ox6t89mri.bkt.clouddn.com/header.jpg");
   background-repeat: no-repeat;
