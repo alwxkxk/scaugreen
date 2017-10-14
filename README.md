@@ -1,32 +1,31 @@
-### 开发基础
-- MarkDown
-- JS HTML5 CSS
-- Nodejs
-- Vue Vue-Router
-- Webpack
+# 绿音
+旨在扩展大学新生环保视野的静态网站。  
+由于只打算微信上显示，只针对移动端而作的静态页面，PC端浏览效果并不好。另考虑到绿音一年也更新不了几次，所以华农环协直接微信联系我来更新绿音就好。
 
-### 部署
+## 内容更新
+1. 先安装环境（node 8），下载源代码，安装依赖包。
+2. 在src/pages/下以markdwon言语编写内容，经编译后其文件名会成为菜单名，出现在菜单栏中，网站默认以《绿音》为首页。
+3. 上传至静态网站服务器。
 ```bash
-#修改src/pages/ 下的文章
-#生成文章pages.json ,并打包
-npm run build
+#下载源代码
+git clone git@github.com:alwxkxk/scaugreen.git
 
-#手动将img,css,fonts,js文件夹复制粘贴到dist下
+#安装依赖包
+npm install 
+
+#修改文件后重新编译，在dist目录里输出静态网站，另需要将src/css，src/fonts目录复制到dist/目录下。
+npm run build
 
 #本地测试
 npm run dev 
 
 #部署： 上传dist文件 至七牛云 或gh-pages
 ```
-### 备注
-为解决gh-pages图片路径问题，index.css使用的背景图 改用七牛云路径
+### 图片问题
+所有背景图在index.css里修改，采用图床。所有图片都在src/img另有备份保存。
 
-### TODO List
+## TODO List
 ABCD分别对应 重要紧急、重要不紧急、不重要紧急、不重要不紧急
 - 目录排序问题（B）
-- 样式应该独立问题（B）
-- 写一个自动复制文件与目录的脚本（B）
-- 个性化修改 与 开发指南（B）
 - 可配置默认首页（D）
-- 打包时能加载img路径问题（D）
 - ios机存在乱点击出现空白内容（C）
