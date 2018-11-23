@@ -68,7 +68,7 @@ menu:
     directory: archives/
     icon: fa-archive
   - page: about
-    directory: posts/9a07729c
+    directory: posts/3b4b656d
     icon: fa-user
 
 widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts, rencent_comments and links.
